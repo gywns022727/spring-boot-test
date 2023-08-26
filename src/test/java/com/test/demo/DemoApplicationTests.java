@@ -8,21 +8,21 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
 @SpringBootTest(properties = {"value=test", "property.value=propertyTest"},
-		classes = DemoApplication.class,
-		webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+        classes = DemoApplication.class,
+        webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class DemoApplicationTests {
 
-	@Value("${value}")
-	private String value;
+    @Value("${value}")
+    private String value;
 
-	@Value("${property.value}")
-	private String propertyValue;
+    @Value("${property.value}")
+    private String propertyValue;
 
-	@Test
-	void contextLoads() {
-		assertThat(value, is("test"));
-		assertThat(propertyValue, is("propertyTest"));
-	}
+    @Test
+    void contextLoads() {
+        assertThat(value, is("test"));
+        assertThat(propertyValue, is("propertyTest"));
+    }
 
 }
 
